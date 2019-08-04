@@ -1,0 +1,68 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+body {
+  background: black url(background.jpg) center no-repeat;
+  background-size: cover;
+  height: 99vh;
+  margin: 0;
+  transition: ease 0.5s all;
+}
+
+#lightPole {
+  background: grey linear-gradient(#D3D3D3, #737373);
+  float: right;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+#trafficLight {
+  background: #E39904;
+  border-radius: 10px;
+  height: 340px;
+  margin: auto;
+  position: relative;
+  width: 200px;
+}
+
+#trafficLight div {
+  border-radius: 100%;
+  border-top: 5px solid #B07603;
+  display: block;
+  height: 100px;
+  left: 50px;
+  margin: 5px 0 0 0;
+  position: relative;
+  top: 5px;
+  width: 100px;
+}
+
+#red.off {
+  background: #4D0000 radial-gradient(#4D0000, black);
+}
+
+#red.on {
+  background: #FF6666 radial-gradient(#FF6666, #4D0000);
+  box-shadow: 0 0 40px #FF6666;
+}
+
+#yellow.off {
+  background: #4D4D00 radial-gradient(#4D4D00, black);
+}
+
+#yellow.on {
+  background: #FFFF99 radial-gradient(#FFFF99, #4D4D00);
+  box-shadow: 0 0 40px #FFFF99;
+}
+
+#green.off {
+  background: #0F3D0F radial-gradient(#0F3D0F, black);
+}
+
+#green.on {
+  background: #ADEBAD radial-gradient(#ADEBAD, #0F3D0F);
+  box-shadow: 0 0 40px #ADEBAD;
+}
