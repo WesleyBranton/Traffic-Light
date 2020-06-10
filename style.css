@@ -28,7 +28,7 @@ body {
   width: 200px;
 }
 
-#trafficLight div {
+#trafficLight > .light {
   border-radius: 100%;
   border-top: 5px solid #B07603;
   display: block;
@@ -40,7 +40,7 @@ body {
   width: 100px;
 }
 
-#red.off {
+#red {
   background: #4D0000 radial-gradient(#4D0000, black);
 }
 
@@ -49,7 +49,7 @@ body {
   box-shadow: 0 0 40px #FF6666;
 }
 
-#yellow.off {
+#yellow {
   background: #4D4D00 radial-gradient(#4D4D00, black);
 }
 
@@ -58,7 +58,7 @@ body {
   box-shadow: 0 0 40px #FFFF99;
 }
 
-#green.off {
+#green {
   background: #0F3D0F radial-gradient(#0F3D0F, black);
 }
 

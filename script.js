@@ -2,32 +2,39 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-function changeToGreen() {
-    var red = document.getElementById('red');
-    var green = document.getElementById('green');
+// Change traffic light to green
+function toGreen() {
+    light.red.classList.remove('on');
+    light.green.classList.add('on');
 
-    red.className = 'off';
-    green.className = 'on';
-
-    window.setTimeout(changeToYellow, 5000);
+    window.setTimeout(toYellow, 5000);
 }
 
-function changeToYellow() {
-    var yellow = document.getElementById('yellow');
-    var green = document.getElementById('green');
+// Change traffic light to yellow
+function toYellow() {
+    light.green.classList.remove('on');
+    light.yellow.classList.add('on');
 
-    green.className = 'off';
-    yellow.className = 'on';
-
-    window.setTimeout(changeToRed, 2000);
+    window.setTimeout(toRed, 2000);
 }
 
-function changeToRed() {
-    var red = document.getElementById('red');
-    var yellow = document.getElementById('yellow');
+// Change traffic light to red
+function toRed() {
+    light.yellow.classList.remove('on');
+    light.red.classList.add('on');
 
-    yellow.className = 'off';
-    red.className = 'on';
-
-    window.setTimeout(changeToGreen, 5000);
+    window.setTimeout(toGreen, 5000);
 }
+
+// Object to store lights in
+const light = {};
+
+window.addEventListener('load', () => {
+    // Add each like to the light object
+    light.red = document.getElementById('red');
+    light.yellow = document.getElementById('yellow');
+    light.green = document.getElementById('green');
+
+    // Start running the light
+    toRed();
+});
